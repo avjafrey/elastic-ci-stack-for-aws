@@ -2,10 +2,10 @@
 set -eu -o pipefail
 
 echo "Updating awscli..."
-sudo yum upgrade awscli
+sudo yum update -y -q
+sudo yum upgrade -y awscli
 
 echo "Installing zip utils..."
-sudo yum update -y -q
 sudo yum install -y zip unzip
 
 echo "Installing bats..."
